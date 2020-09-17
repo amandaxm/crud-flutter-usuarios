@@ -3,12 +3,12 @@ import 'package:crud_usuario/components/TextInput.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CargoScreen extends StatelessWidget {
+class DeletarEnderecoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cadastrar Cargo"),
+        title: Text("Deletar Endereço"),
           backgroundColor: Colors.lightGreen
       ),
       backgroundColor: Colors.white,
@@ -18,11 +18,9 @@ class CargoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TextFieldWidget(
-              label: "Nome",
+              label: "Id Endereco",
             ),
-            TextFieldWidget(
-              label: "Descrição",
-            ),
+
             Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
                 child: Container(
@@ -32,7 +30,7 @@ class CargoScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      title: ('Cadastrar'),
+                      title: ('Deletar Endereco'),
 
                     )
 

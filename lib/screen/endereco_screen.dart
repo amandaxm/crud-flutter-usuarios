@@ -9,7 +9,7 @@ class EnderecoScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Cadastrar Endereco"),
-          backgroundColor: Colors.grey
+          backgroundColor: Colors.lightGreen
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(

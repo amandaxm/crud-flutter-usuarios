@@ -3,13 +3,13 @@ import 'package:crud_usuario/components/TextInput.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CargoScreen extends StatelessWidget {
+class ListarCargoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cadastrar Cargo"),
-          backgroundColor: Colors.lightGreen
+        title: Text("Listar Cargo"),
+        backgroundColor: Colors.lightGreen,
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -18,11 +18,9 @@ class CargoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TextFieldWidget(
-              label: "Nome",
+              label: "Id Cargo",
             ),
-            TextFieldWidget(
-              label: "Descrição",
-            ),
+
             Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
                 child: Container(
@@ -32,7 +30,21 @@ class CargoScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      title: ('Cadastrar'),
+                      title: ('Listar Cargo'),
+
+                    )
+
+                )),
+            Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Container(
+                    height: 50.0, //definiu altura
+                    child:
+                    CustomButtonWidget(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      title: ('Listar todos cargos'),
 
                     )
 
