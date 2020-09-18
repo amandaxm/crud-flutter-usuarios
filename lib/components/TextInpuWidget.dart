@@ -63,7 +63,7 @@ class TextFieldInput extends State<TextFieldWidget> {
         labelText: this.widget.label,
         labelStyle: TextStyle(color: Colors.black)),
          textAlign: TextAlign.center,
-         style: TextStyle(color: Colors.black, fontSize: 25),
+         style: TextStyle(color: Colors.black, fontSize: 20),
     ),
     );
   }}

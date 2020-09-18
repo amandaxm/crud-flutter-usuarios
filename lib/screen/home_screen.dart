@@ -1,5 +1,5 @@
 import 'package:crud_usuario/components/BotaoWidget.dart';
-import 'package:crud_usuario/components/TextInput.dart';
+import 'package:crud_usuario/components/TextInpuWidget.dart';
 import 'package:crud_usuario/screen/deletar_endereco_screen.dart';
 import 'package:crud_usuario/screen/listar_cargo_screen.dart';
 import 'package:crud_usuario/screen/usuario_screen.dart';
@@ -23,19 +23,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Gerenciador',),
-            backgroundColor: Colors.lightGreen
-        ),
+            title: Text(
+              'Gerenciador',
+            ),
+            backgroundColor: Colors.lightGreen),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           padding: EdgeInsets.fromLTRB(82, 10, 20, 0),
-
           child: Column(
-
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-
                 //de
                 Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 10),
@@ -50,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => EnderecoScreen()),
                         );
                       },
-                      title:"Cadastrar Endereço",
+                      title: "Cadastrar Endereço",
                     ),
                   ),
                 ),
@@ -67,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => ListarEnderecoScreen()),
                         );
                       },
-                      title:"Listar Endereços",
+                      title: "Listar Endereços",
                     ),
                   ),
                 ),
@@ -84,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => DeletarEnderecoScreen()),
                         );
                       },
-                      title:"Deletar Endereços",
+                      title: "Deletar Endereços",
                     ),
                   ),
                 ),
@@ -101,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => UsuarioScreen()),
                         );
                       },
-                      title:"Cadastrar Usuario",
+                      title: "Cadastrar Usuario",
                     ),
                   ),
                 ),
@@ -118,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => ListarUsuarioScreen()),
                         );
                       },
-                      title:"Listar Usuários",
+                      title: "Listar Usuários",
                     ),
                   ),
                 ),
@@ -135,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => DeletarUsuarioScreen()),
                         );
                       },
-                      title:"Deletar Usuario",
+                      title: "Deletar Usuario",
                     ),
                   ),
                 ),
@@ -152,7 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => EnderecoScreen()),
                         );
                       },
-                      title:"Cadastrar Cargo",
+                      title: "Cadastrar Cargo",
                     ),
                   ),
                 ),
@@ -169,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => ListarCargoScreen()),
                         );
                       },
-                      title:"Listar Cargos",
+                      title: "Listar Cargos",
                     ),
                   ),
                 ),
@@ -186,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => DeletarCargoScreen()),
                         );
                       },
-                      title:"Deletar Cargo",
+                      title: "Deletar Cargo",
                     ),
                   ),
                 ),
