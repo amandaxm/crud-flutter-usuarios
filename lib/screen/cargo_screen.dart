@@ -1,5 +1,5 @@
 import 'package:crud_usuario/components/BotaoWidget.dart';
-import 'package:crud_usuario/components/TextInpuWidget.dart';
+import 'package:crud_usuario/components/TextInputWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +17,7 @@ class CargoScreen extends StatelessWidget {
           children: [
             TextFieldWidget(
               label: "Nome",
+
             ),
             TextFieldWidget(
               label: "Descrição",

@@ -1,5 +1,5 @@
 import 'package:crud_usuario/components/BotaoWidget.dart';
-import 'package:crud_usuario/components/TextInpuWidget.dart';
+import 'package:crud_usuario/components/TextInputWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,21 +20,27 @@ class UsuarioScreen extends StatelessWidget {
             ),
             TextFieldWidget(
               label: "Email",
+              inputType: TextInputType.emailAddress,
             ),
             TextFieldWidget(
               label: "Idade",
+              inputType: TextInputType.number,
             ),
             TextFieldWidget(
               label: "Ativo",
+
             ),
             TextFieldWidget(
               label: "CPF",
+              inputType: TextInputType.text,
             ),
             TextFieldWidget(
               label: "Cargo",
+              inputType: TextInputType.text,
             ),
             TextFieldWidget(
               label: "Código Endereço",
+              inputType: TextInputType.number,
             ),
             Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),

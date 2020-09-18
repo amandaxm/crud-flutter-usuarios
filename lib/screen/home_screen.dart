@@ -1,12 +1,10 @@
 import 'package:crud_usuario/components/BotaoWidget.dart';
-import 'package:crud_usuario/components/TextInpuWidget.dart';
 import 'package:crud_usuario/screen/deletar_endereco_screen.dart';
 import 'package:crud_usuario/screen/listar_cargo_screen.dart';
-import 'package:crud_usuario/screen/usuario_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'cargo_screen.dart';
+import 'CadastroUsuario/usuario_screen.dart';
 import 'deletar_cargo_screen.dart';
 import 'deletar_usuario_screen.dart';
 import 'endereco_screen.dart';
