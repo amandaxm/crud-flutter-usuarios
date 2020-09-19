@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cadastro_controller.dart';
+part of 'deletar_usuario_controller.dart';
 
 // **************************************************************************
 // StoreGenerator

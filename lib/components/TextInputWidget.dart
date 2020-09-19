@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class TextFieldWidget extends StatefulWidget {
   final String placeholder;
   final bool autofocus;
@@ -56,18 +57,19 @@ class TextFieldInput extends State<TextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child:
-        TextField(
+      child: TextField(
+        autocorrect: this.widget.autocorrect,
+        obscureText: this.widget.obscureText,
+        enabled: this.widget.enabled,
+        controller: this.widget.controller,
+        focusNode: this.widget.focusNode,
         keyboardType: TextInputType.name,
         decoration: InputDecoration(
-        labelText: this.widget.label,
-        labelStyle: TextStyle(color: Colors.black)),
-         textAlign: TextAlign.center,
-         style: TextStyle(color: Colors.black, fontSize: 20),
-    ),
+            labelText: this.widget.label,
+            labelStyle: TextStyle(color: Colors.black)),
+        textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.black, fontSize: 20),
+      ),
     );
-  }}
-
-
-
-
+  }
+}

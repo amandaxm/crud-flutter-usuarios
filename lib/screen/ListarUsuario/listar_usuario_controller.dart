@@ -1,6 +1,6 @@
 import 'package:mobx/mobx.dart';
 
-part 'cadastro_controller.g.dart';
+part 'listar_usuario_controller.g.dart';
 
 class CadastroController = _CadastroController with _$CadastroController;
 

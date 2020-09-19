@@ -1,15 +1,15 @@
 import 'package:crud_usuario/components/BotaoWidget.dart';
-import 'package:crud_usuario/screen/deletar_endereco_screen.dart';
-import 'package:crud_usuario/screen/listar_cargo_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'CadastroCargo/cargo_screen.dart';
 import 'CadastroUsuario/usuario_screen.dart';
-import 'deletar_cargo_screen.dart';
-import 'deletar_usuario_screen.dart';
-import 'endereco_screen.dart';
-import 'listar_endereco_screen.dart';
-import 'listar_usuario_screen.dart';
+import 'DeletarCargo/deletar_cargo_screen.dart';
+import 'DeletarEndereco/deletar_endereco_screen.dart';
+import 'DeletarUsuario/deletar_usuario_screen.dart';
+import 'CadastroEndereco/endereco_screen.dart';
+import 'ListarCargo/listar_cargo_screen.dart';
+import 'ListarEndereco/listar_endereco_screen.dart';
+import 'ListarUsuario/listar_usuario_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => EnderecoScreen()),
+                              builder: (context) => CargoScreen()),
                         );
                       },
                       title: "Cadastrar Cargo",
