@@ -23,4 +23,10 @@ mixin _$CadastroCargoController on _CadastroCargoController, Store {
     }
   }
 
+  @override
+  String toString() {
+    return '''
+
+    ''';
+  }
 }

@@ -40,13 +40,7 @@ class _CargoScreenState extends State<CargoScreen> {
               textCapitalization: TextCapitalization.words,
               autocorrect: false,
             ),
-            Padding(
-              child: Text(
-                "NOME",
-                style: TextStyle(color: Colors.blue, fontSize: 14),
-              ),
-              padding: EdgeInsets.only(left: 4),
-            ),
+
             TextFieldWidget(
               backgroundColorContainer: Colors.white,
               textColor: Colors.blue,

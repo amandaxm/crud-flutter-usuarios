@@ -11,7 +11,7 @@ abstract class _CadastroCargoController with Store {
   final _cargoService = CargoService();
 
   final cargo = ServiceStatusData();
-@action
+  @action
   void salvarDadosCargo(CargoDTO cargoDTO) {
     //frwkLoading.setLoading(loading: true);
     this._cargoService.salvarCargo(cargoDTO).then((response) async {

@@ -3,7 +3,12 @@ import 'package:crud_usuario/components/TextInputWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'deletar_endereco_controller.dart';
+
 class DeletarEnderecoScreen extends StatelessWidget {
+  final _deletar_endereco_controller = DeletarEnderecoController();
+  final txtId = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +21,11 @@ class DeletarEnderecoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TextFieldWidget(
-              label: "Id Endereço",
+              label: "ID_Endereco",
+              inputType: TextInputType.number,
+              controller: txtId,
+              autocorrect: false,
+
             ),
             Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
@@ -24,9 +33,11 @@ class DeletarEnderecoScreen extends StatelessWidget {
                     height: 50.0, //definiu altura
                     child: CustomButtonWidget(
                       onPressed: () {
-                        Navigator.pop(context);
+                        var id2=int.parse(txtId.text);
+
+                        _deletar_endereco_controller.deletarEndereco(id2);
                       },
-                      title: ('Deletar Endereco'),
+                      title: ('Deletar Cargo'),
                     ))),
           ],
         ),

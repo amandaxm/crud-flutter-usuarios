@@ -12,7 +12,7 @@ class NetworkService {
   static Dio _dio;
 
   static BaseOptions _baseOptions = new BaseOptions(
-      baseUrl: 'http://192.168.0.2:8080/',
+      baseUrl: 'http://192.168.0.7:8080/',
       connectTimeout: 60000,
       receiveTimeout: 60000,
       sendTimeout: 60000
@@ -36,7 +36,7 @@ class NetworkService {
   }
 
   _init() {
-    print('NetworkService init: ${'http://192.168.0.2:8080/'}');
+    print('NetworkService init: ${'http://192.168.0.7:8080/'}');
     if (_dio == null) {
       _dio = Dio(_baseOptions);
     }

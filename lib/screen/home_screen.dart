@@ -165,11 +165,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (context) => ListarCargoScreen()),
                         );
                       },
-                      title: "Listar Cargos",
+                      title: "Listar Cargo",
                     ),
                   ),
-                ),
-                Padding(
+                ),Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 10),
                   child: Container(
                     height: 50.0, //definiu altura

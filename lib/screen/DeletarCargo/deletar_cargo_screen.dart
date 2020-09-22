@@ -3,7 +3,12 @@ import 'package:crud_usuario/components/TextInputWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'deletar_cargo_controller.dart';
+
 class DeletarCargoScreen extends StatelessWidget {
+  final _deletar_cargo_controller = DeletarCargoController();
+  final txtId = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +21,11 @@ class DeletarCargoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TextFieldWidget(
-              label: "Id Cargo",
+              label: "ID_Cargo",
+              inputType: TextInputType.number,
+              controller: txtId,
+              autocorrect: false,
+
             ),
             Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
@@ -24,7 +33,9 @@ class DeletarCargoScreen extends StatelessWidget {
                     height: 50.0, //definiu altura
                     child: CustomButtonWidget(
                       onPressed: () {
-                        Navigator.pop(context);
+                        var id2=int.parse(txtId.text);
+
+                        _deletar_cargo_controller.deletarCargo(id2);
                       },
                       title: ('Deletar Cargo'),
                     ))),
