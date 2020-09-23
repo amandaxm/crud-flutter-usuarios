@@ -36,17 +36,18 @@ class UsuarioService extends BaseService  {
         throw (error);
       });
   }
-}
-Future<UsuarioDTO> listarUsuario() async {
-  final response = await http.get('http://192.168.0.6:8080/usuario/listar');
 
-  if (response.statusCode == 200) {
-    // If the server did return a 200 OK response,
-    // then parse the JSON.
-    return UsuarioDTO.map(json.decode(response.body));
-  } else {
-    // If the server did not return a 200 OK response,
-    // then throw an exception.
-    throw Exception('Falha ao listar usuario');
+  Future<List<UsuarioDTO>> buscarUsuario() {
+    return
+      this.request(HttpMethod.GET, '/usuario/listar',
+          cacheFirst:true)
+          .then((response) {
+        if (response == null) return null;
+        var list = response as List;
+        return list.map((i)=>UsuarioDTO.map(i)).toList();
+      }).catchError((error) {
+        print(error.toString());
+        throw (error);
+      });
   }
 }

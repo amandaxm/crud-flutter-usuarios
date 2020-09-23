@@ -17,6 +17,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  static const color2 = const Color(0xFFf0f0f5);
+  static const color = const Color(0xFFe02041);
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
             title: Text(
               'Gerenciador',
             ),
-            backgroundColor: Colors.lightGreen),
-        backgroundColor: Colors.white,
+            backgroundColor: color),
+        backgroundColor: color2,
         body: SingleChildScrollView(
           padding: EdgeInsets.fromLTRB(82, 10, 20, 0),
           child: Column(

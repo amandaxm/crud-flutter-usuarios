@@ -33,4 +33,17 @@ class EnderecoService extends BaseService  {
         throw (error);
       });
   }
+  Future<List<EnderecoDTO>> buscarEndereco() {
+    return this.request(HttpMethod.GET, '/endereco/listar',
+          cacheFirst:true)
+          .then((response) {
+        if (response == null) return null;
+        var list = response as List;
+        return list.map((i)=>EnderecoDTO.map(i)).toList();
+      }).catchError((error) {
+        print(error.toString());
+        throw (error);
+      });
+  }
+
 }

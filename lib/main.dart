@@ -7,16 +7,18 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  static const color2 = const Color(0xFFf0f0f5);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'Roboto',
+        fontFamily: 'Roboto Mono',
         appBarTheme: AppBarTheme(
           brightness: Brightness.light,
         ),
-        backgroundColor: Colors.grey,
+        backgroundColor: color2,
         canvasColor: Colors.transparent,
       ),
       home: HomeScreen(),

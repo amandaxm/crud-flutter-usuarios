@@ -24,19 +24,30 @@ class _UsuarioScreenState extends State<UsuarioScreen> {
   final txtCargo_id = TextEditingController();
   final txtEmail = TextEditingController();
   final txtNumero = TextEditingController();
+  static const color = const Color(0xFFe02041);
+  static const color2 = const Color(0xFFf0f0f5);
+  static  const color3 = const Color(0xFFe41414d);
+
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Cadastrar Usuario"), backgroundColor: Colors.lightGreen),
-      backgroundColor: Colors.white,
+          title: Text("Cadastrar Usuario"), backgroundColor: color),
+      backgroundColor: color2,
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+
+
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            ),
+            Icon(Icons.person_add_alt_1, size: 150.0, color: color3),
+
             TextFieldWidget(
               label: "Nome",
               controller: txtNome,

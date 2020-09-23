@@ -21,18 +21,28 @@ class _EnderecoScreenState extends State<EnderecoScreen> {
   final txtNumero = TextEditingController();
   final txtRua = TextEditingController();
   final txtUsuario = TextEditingController();
+  static const color = const Color(0xFFe02041);
+  static const color2 = const Color(0xFFf0f0f5);
+  static  const color3 = const Color(0xFFe41414d);
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: Text("Cadastrar Endereco"),
-          backgroundColor: Colors.lightGreen),
-      backgroundColor: Colors.white,
+          backgroundColor: color),
+      backgroundColor: color2,
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            ),
+            Icon(Icons.house_rounded, size: 150.0, color: color3),
             TextFieldWidget(
               label: "Rua",
               controller: txtRua,
@@ -64,6 +74,7 @@ class _EnderecoScreenState extends State<EnderecoScreen> {
               textCapitalization: TextCapitalization.words,
 
             ),
+
             TextFieldWidget(
               label: "CEP",
               controller: txtCep,

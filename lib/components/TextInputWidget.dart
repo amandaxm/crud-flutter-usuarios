@@ -54,22 +54,39 @@ class TextFieldWidget extends StatefulWidget {
 }
 
 class TextFieldInput extends State<TextFieldWidget> {
+  static const color = const Color(0xFFe02041);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: TextField(
+      child: new Theme(
+
+
+          data: new ThemeData(
+            primaryColor: color,
+            primaryColorDark: color,
+            fontFamily: 'Roboto Mono',
+
+          ),
+        child: TextField(
         autocorrect: this.widget.autocorrect,
         obscureText: this.widget.obscureText,
         enabled: this.widget.enabled,
         controller: this.widget.controller,
         focusNode: this.widget.focusNode,
         keyboardType: TextInputType.name,
-        decoration: InputDecoration(
+          decoration: new InputDecoration(
+
+            //border: OutlineInputBorder(),
             labelText: this.widget.label,
-            labelStyle: TextStyle(color: Colors.black)),
+            labelStyle: TextStyle(),
+        ),
+
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.black, fontSize: 20),
-      ),
+        style: TextStyle( fontSize: 20),
+      )
+
+    ),
     );
   }
 }

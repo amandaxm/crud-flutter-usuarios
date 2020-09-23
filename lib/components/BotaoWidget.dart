@@ -22,19 +22,21 @@ class CustomButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
-        width: this.width ?? 50,
-        height: this.height ?? 50,
+        width: this.width ?? 60,
+        height: this.height ?? 60,
         margin: this.margin,
         child: RaisedButton(
-        onPressed: onPressed,
-        disabledColor: Colors.grey,
-        disabledTextColor: Colors.grey,
+
+          onPressed: onPressed,
+        //disabledColor: color,
+        //disabledTextColor: color,
           child: Text(
             title,
             style: TextStyle(
               // color: this.style.titleColor,
-                fontSize: 17,
+                fontSize: 15,
                 fontWeight: FontWeight.w500),
           ),
         ),

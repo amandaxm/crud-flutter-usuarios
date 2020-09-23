@@ -16,18 +16,25 @@ class _CargoScreenState extends State<CargoScreen> {
 
   final txtNome = TextEditingController();
   final txtTarefas = TextEditingController();
+  static const color = const Color(0xFFe02041);
+  static const color2 = const Color(0xFFf0f0f5);
+  static  const color3 = const Color(0xFFe41414d);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Cadastrar Cargo"), backgroundColor: Colors.lightGreen),
-      backgroundColor: Colors.white,
+          title: Text("Cadastrar Cargo"), backgroundColor: color),
+      backgroundColor: color2,
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+            ),
+            Icon(Icons.assignment, size: 150.0, color: color3),
             TextFieldWidget(
               label: "Nome",
               controller: txtNome,
@@ -41,14 +48,6 @@ class _CargoScreenState extends State<CargoScreen> {
               autocorrect: false,
             ),
 
-            TextFieldWidget(
-              backgroundColorContainer: Colors.white,
-              textColor: Colors.blue,
-              placeholder: "",
-              controller: txtNome,
-              textCapitalization: TextCapitalization.words,
-              autocorrect: false,
-            ),
             Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
                 child: Container(
