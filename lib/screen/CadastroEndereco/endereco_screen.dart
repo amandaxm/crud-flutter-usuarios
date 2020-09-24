@@ -53,7 +53,6 @@ class _EnderecoScreenState extends State<EnderecoScreen> {
               label: "Número",
               inputType: TextInputType.text,
               controller: txtNumero,
-              textCapitalization: TextCapitalization.words,
               autocorrect: false,
             ),
             TextFieldWidget(

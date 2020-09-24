@@ -22,6 +22,7 @@ class EnderecoDTO {
     this.estado = json["estado"];
     this.complemento=json["complemento"];
     this.rua=json["rua"];
+    this.numero=json["numero"];
     this.usuario_id=json["usuario.id"];
   }
 
@@ -32,6 +33,7 @@ class EnderecoDTO {
     map["estado"]=this.estado;
     map["complemento"]=this.complemento;
     map["rua"]=this.rua;
+    map["numero"]=this.numero;
     map["usuario.id"]=this.usuario_id;
     return map;
   }
