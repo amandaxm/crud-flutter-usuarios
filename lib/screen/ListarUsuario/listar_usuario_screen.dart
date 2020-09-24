@@ -45,7 +45,6 @@ class _ListarUsuarioScreenState extends State<ListarUsuarioScreen> {
                 Icon(Icons.person, size: 100.0, color: color3),
                 Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
-
                     children: this
                         ._listar_usuario_controller
                         .listar.getData.map((usuario) {
